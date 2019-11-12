@@ -2,6 +2,9 @@ import $ from 'jquery';
 Window.$=$
 // import 'bootstrap3/dist/css/bootstrap.min.css';
 
+import axios from 'axios'
+window.axios=axios
+
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);

@@ -6,6 +6,9 @@ import top from '../vue_movie/top.vue';
 import sideNavbar from '../vue_movie/sideNavbar.vue';
 import contentInner from '../vue_movie/contentInner.vue';
 import pageFooter from '../vue_movie/pageFooter.vue';
+
+import login from '../vue_movie/login.vue';
+import register from '../vue_movie/register.vue';
 // import bottom from '../vue/bottom.vue'; 
 
 
@@ -15,13 +18,20 @@ import pageFooter from '../vue_movie/pageFooter.vue';
 var router = new VueRouter({
 	routes: [
 		{
+			path:"/login",component:login
+		},
+		{
+			path:"/register",component:register
+		},
+		{
 			path: "/*", components: {
 				"top":top,
 				"sideNavbar":sideNavbar,
 				"contentInner":contentInner,
 				"pageFooter":pageFooter
 			}
-		}
+		},
+		
 	]
 });
 

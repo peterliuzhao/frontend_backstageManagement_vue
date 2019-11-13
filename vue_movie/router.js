@@ -36,7 +36,7 @@ var router = new VueRouter({
 		components: {
 			"top": top,
 			"pageFooter": pageFooter,
-			"sideNavbar": middle,
+			"middle": middle,
 		},
 		children: [
 			
@@ -49,6 +49,21 @@ var router = new VueRouter({
 	}]
 
 
+});
+
+
+//确定是否登录，不是则一直在登陆页面
+router.beforeEach(function (to, from, next) {
+	const isLogin = sessionStorage.getItem('isLogin')
+	if (isLogin) {
+		next()
+	} else {
+		if (to.path === '/login') { //这就是跳出循环的关键
+			next()
+		} else {
+			next('/login')
+		}
+	} 
 });
 
 export default router;

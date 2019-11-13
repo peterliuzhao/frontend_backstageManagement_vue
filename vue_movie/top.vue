@@ -78,7 +78,7 @@
                   </ul>
                 </li>
                 <!-- Logout    -->
-                <li class="nav-item"><a href="login.html" class="nav-link logout"> <span class="d-none d-sm-inline">安全登出</span><i class="fa fa-sign-out"></i></a></li>
+                <li class="nav-item"><a href="#" class="nav-link logout"> <span class="d-none d-sm-inline" id="logoutBtn" @click="logout">安全登出</span><i class="fa fa-sign-out"></i></a></li>
               </ul>
             </div>
           </div>
@@ -87,11 +87,20 @@
 	</div>
 </template>
 
-<script>
-export default {
-   
-    
-}
+<script>    
+    export default {
+        methods:{
+          logout:function(){
+            alert(123)
+            axios.get("users/logout")
+            .then((response)=>{
+                alert("logout")
+                sessionStorage.clear();
+                window.location.href='#/login';
+            });
+          }
+        }
+    }
 </script>
 
 <style>

@@ -11,7 +11,7 @@
                       <div class="logo">
                         <h1>影城用户注册</h1>
                       </div>
-                      <p></p>
+                      <p></p> 
                     </div>
                   </div>
                 </div>

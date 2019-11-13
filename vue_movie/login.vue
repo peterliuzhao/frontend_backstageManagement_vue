@@ -9,7 +9,7 @@
                 <div class="info d-flex align-items-center">
                   <div class="content">
                     <div class="logo">  
-                      <h1>影城后台管理系统登录</h1>
+                      <h1>影城后台管理系统登录</h1> 
                     </div>
                     <p></p>
                   </div> 

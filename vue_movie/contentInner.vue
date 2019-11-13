@@ -1,12 +1,12 @@
 <template>
-	<div id="middle" class="page">
-      <div class="page-content d-flex align-items-stretch"> 
+	<div id="middle" class="page col-md-12">
+     <!-- <div class="page-content d-flex align-items-stretch"> -->
         <div class="content-inner">
           <!-- Page Header-->
           <header class="page-header">
             <div class="container-fluid">
               <h2 class="no-margin-bottom">Dashboard</h2>
-            </div>
+            </div> 
           </header>
           <!-- Dashboard Counts Section-->
           <section class="dashboard-counts no-padding-bottom">
@@ -544,9 +544,8 @@
               </div>
             </div>
           </section>
-         
         </div>
-      </div>
+      <!-- </div> -->
 	</div>
 </template>
 

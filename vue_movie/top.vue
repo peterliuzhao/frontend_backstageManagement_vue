@@ -3,7 +3,7 @@
         <!-- Main Navbar-->
       <header class="header">
         <nav class="navbar">
-          <!-- Search Box-->
+          <!-- Search Box--> 
           <div class="search-box">
             <button class="dismiss"><i class="icon-close"></i></button>
             <form id="searchForm" action="#" role="search">

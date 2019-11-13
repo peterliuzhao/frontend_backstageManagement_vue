@@ -22,9 +22,9 @@ import register from '../vue_movie/register.vue';
 var router = new VueRouter({
 
 	routes: [
-		{
-			path:"/",component:login
-		},
+		// {
+		// 	path:"/",component:login
+		// },
 		{
 			path:"/login",component:login
 		},
@@ -43,7 +43,8 @@ var router = new VueRouter({
 			{path: "/contentInner",component: contentInner},
 			{path: "/orders",component: orders},
 			{path: "/chart",component: chart},
-			// {path: "/",component: contentInner},
+			{path: "/",component: contentInner},
+			
 			
 			
 			

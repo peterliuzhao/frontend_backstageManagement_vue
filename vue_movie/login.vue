@@ -29,7 +29,8 @@
                         <label for="login-password" class="label-material">密码</label>
                       </div><button type="button" id="login" @click="login" class="btn btn-outline-primary">登录</button>
                       <!-- This should be submit button but I replaced it with <a> for demo purposes-->
-                    </form><a href="#" class="forgot-pass">忘记密码?</a><br><small>还没有帐户? </small><a href="#/register" class="signup">去注册</a>
+                    </form><a href="#" class="forgot-pass">忘记密码?</a><br><small>还没有帐户?</small>
+					<a href="#/register" class="signup">去注册</a>
                   </div>
                 </div>
               </div>
@@ -56,7 +57,7 @@
 
         methods: {
         login:function(){
-            axios.get("users/login",{
+           this.$axios.get("users/login",{
             params:{
                 uname:this.username,
                 upwd:this.password

@@ -1,4 +1,4 @@
-import Vue from 'vue';
+﻿import Vue from 'vue';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
@@ -12,7 +12,7 @@ import orders from '../vue_movie/orders.vue';
 
 import login from '../vue_movie/login.vue';
 import register from '../vue_movie/register.vue'; 
-
+import customer from '../vue_movie/customer.vue';
 // import bottom from '../vue/bottom.vue'; 
 
 
@@ -22,9 +22,9 @@ import register from '../vue_movie/register.vue';
 var router = new VueRouter({
 
 	routes: [
-		{
-			path:"/",component:login
-		},
+		// {
+		// 	path:"/",component:login
+		// },
 		{
 			path:"/login",component:login
 		},
@@ -43,8 +43,9 @@ var router = new VueRouter({
 			{path: "/contentInner",component: contentInner},
 			{path: "/orders",component: orders},
 			{path: "/chart",component: chart},
-			// {path: "/",component: contentInner},			
-		]
+			{path: "/customer",component: customer},
+			// {path: "/",component: contentInner},	
+
 
 	}]
 

@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 import top from '../vue_movie/top.vue';
-import sideNavbar from '../vue_movie/sideNavbar.vue';
+import middle from '../vue_movie/middle.vue';
 import contentInner from '../vue_movie/contentInner.vue';
 import pageFooter from '../vue_movie/pageFooter.vue';
 
@@ -36,17 +36,15 @@ var router = new VueRouter({
 		components: {
 			"top": top,
 			"pageFooter": pageFooter,
-			"sideNavbar": sideNavbar,
+			"sideNavbar": middle,
 		},
 		children: [
 			
 			{path: "/contentInner",component: contentInner},
 			{path: "/orders",component: orders},
 			{path: "/chart",component: chart},
+
 			{path: "/",component: contentInner},
-			
-			
-			
 			
 		]
 

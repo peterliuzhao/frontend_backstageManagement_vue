@@ -1,4 +1,4 @@
-import Vue from 'vue';
+﻿import Vue from 'vue';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
@@ -22,9 +22,9 @@ import customer from '../vue_movie/customer.vue';
 var router = new VueRouter({
 
 	routes: [
-		{
-			path:"/",component:login
-		},
+		// {
+		// 	path:"/",component:login
+		// },
 		{
 			path:"/login",component:login
 		},
@@ -44,8 +44,8 @@ var router = new VueRouter({
 			{path: "/orders",component: orders},
 			{path: "/chart",component: chart},
 			{path: "/customer",component: customer},
-			// {path: "/",component: contentInner},			
-		]
+			// {path: "/",component: contentInner},	
+
 
 	}]
 

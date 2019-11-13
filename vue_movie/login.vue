@@ -65,7 +65,7 @@
             ).then((response)=>{
                 if(response.data.status == 200){
                   sessionStorage.setItem("isLogin",true);
-                  window.location.href='#/index';
+                  window.location.href='#/contentInner';
                 }
                 else if(response.data.status == 500){
                   alert("输入信息有误，请核对")

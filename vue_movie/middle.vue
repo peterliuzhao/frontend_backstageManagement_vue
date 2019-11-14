@@ -40,7 +40,10 @@
 					<li> <a href="#"> <i class="icon-picture"></i>Demo </a></li>
 				</ul>
 			</nav>
-			<router-view style="padding: 0px;"></router-view>
+			
+				<router-view style="padding: 0px;"></router-view>
+			
+			
 		</div>
 
 	</div>

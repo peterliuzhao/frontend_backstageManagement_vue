@@ -6,7 +6,7 @@
 				<h2 class="no-margin-bottom">订单</h2>
 			</div>
 		</header>
-		<!-- Breadcrumb--> 
+		<!-- Breadcrumb-->
 		<div class="breadcrumb-holder container-fluid">
 			<ul class="breadcrumb">
 				<li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -21,7 +21,7 @@
 				<div class="row">
 
 					<div class="col-lg-12">
-
+						<router-view name="ordersChart"></router-view>
 						<form class="form form-inline">
 							<button class="btn btn-info" @click="showAllOrders" type="button">所有订单</button>
 							<label>当前日期：</label> <input type="date" class="form-control" v-model="dates" />
@@ -88,29 +88,27 @@
 </template>
 
 <script>
-	
-	
 	export default {
-		
+
 		created() {
 			this.showAllOrders();
 		},
-		data(){
-			return{
+		data() {
+			return {
 				allOrders: "",
 				dates: "",
 			}
 		},
-		methods:{
+		methods: {
 			showAllOrders() {
-				
+
 				this.$axios.get("orders", {
 						params: {
 							tid: "1"
 						}
 					})
 					.then((response) => {
-			
+
 						this.allOrders = response.data;
 					})
 			},
@@ -122,7 +120,7 @@
 						}
 					})
 					.then((response) => {
-			
+
 						this.allOrders = response.data;
 					})
 			},

@@ -64,10 +64,11 @@
             } }
             ).then((response)=>{
                 if(response.data.status == 200){
-                window.location.href='index.html';
+                  sessionStorage.setItem("isLogin",true);
+                  window.location.href='#/contentInner';
                 }
                 else if(response.data.status == 500){
-                alert("输入信息有误，请核对")
+                  alert("输入信息有误，请核对")
                 }
             });
         }}

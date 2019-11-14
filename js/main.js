@@ -1,10 +1,12 @@
 import $ from 'jquery';
-Window.$=$;
+Window.$;
 
 import axios from 'axios';
 window.axios = axios;
+
 Vue.prototype.$axios = axios;
 axios.defaults.baseURL = "http://localhost:8888/";
+axios.defaults.withCredentials = true;
 
 
 import Vue from 'vue';
@@ -19,6 +21,7 @@ Vue.component('v-chart', ECharts);
 
 import App from '../vue_movie/App.vue';
 import router from '../vue_movie/router.js';
+
 
 
 

@@ -20,6 +20,9 @@
 						<router-link to="/orders"><i class="icon-grid"></i> 订单</router-link>
 					</li>
 					<li>
+						<router-link to="/customer"><i class="icon-user"></i> 顾客</router-link>
+					</li>
+					<li>
 						<router-link to="/chart"> <i class="fa fa-bar-chart"></i>Charts </router-link>
 					</li>
 					<li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
@@ -51,7 +54,6 @@
 
 <script>
 	
-		
 </script>
 
 <style>

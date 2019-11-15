@@ -13,6 +13,12 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
+import ECharts from 'vue-echarts';
+import 'echarts/lib/chart/bar';
+import 'echarts/lib/component/tooltip';
+Vue.component('v-chart', ECharts);
+
+
 import App from '../vue_movie/App.vue';
 import router from '../vue_movie/router.js';
 

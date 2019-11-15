@@ -1,5 +1,5 @@
 <template>
-	<div id="sideNavbar" style="clear:both">
+	<div id="middle" style="clear:both">
 		<div class="page-content d-flex align-items-stretch">
 			<!-- Side Navbar -->
 			<nav class="side-navbar">

@@ -80,9 +80,22 @@
 				</div>
 			</div>
 
-			<button type="button" class="btn btn-light" id="prevBtn">前一页</button>
-			<button type="button" class="btn btn-light" id="nextBtn">下一页</button>
+			<div style="text-align: center;margin-bottom: 20px;">
+				<button @click='find(1)' class="btn btn-outline-primary">首页</button>
+				<button @click='find(orders.prev)' class="btn btn-outline-primary">上一页</button>
 
+				<span v-for="i in v_pages">
+					<span v-if="i==orders.p" class="btn"><font color="red">{{i}}</font></span>
+					<span @click='find(i)' v-if="!(i==orders.p)" class="btn"><font>{{i}}</font></span>
+				</span>
+				
+				<button @click='find(orders.next)'  class="btn btn-outline-primary">下一页</button>
+				<button @click='find(orders.maxPage)' class="btn btn-outline-primary">末页</button>
+			</div>
+
+			<!-- created() {
+			this.showAllOrders();
+		}, -->
 
 		</section>
 
@@ -92,16 +105,50 @@
 <script>
 	export default {
 
-		created() {
-			this.showAllOrders();
-		},
+
+		mounted:function(){
+				this.find(1);
+				
+			},
+		
 		data() {
 			return {
 				allOrders: "",
 				dates: "",
+				currentPage:1,
+				v_pages:[],
+				orders:[],
+
 			}
 		},
 		methods: {
+			find(page){
+					var self=this;
+					var tid=this.tid;
+					
+					axios.get("orders",{
+						params:{
+							currentPage:page,
+							tid: "1"
+						}
+					}).then((response) => {
+						console.log(response)
+						this.orders = response.data;
+						this.allOrders = response.data.list;
+						this.v_pages=[];
+						this.pages(self.orders.startPage,self.orders.endPage);
+					})
+			},
+			
+			/*分页页码数据  */
+			pages(startPage,endPage){
+				var self=this;
+				for(var i=startPage;i<=endPage;i++){
+					self.v_pages.push(i);
+				}
+			},
+			
+
 			showAllOrders() {
 
 				axios.get("orders", {
@@ -114,6 +161,7 @@
 						this.allOrders = response.data;
 					})
 			},
+
 			showDayOrders() {
 				axios.get("orders/findDay", {
 						params: {

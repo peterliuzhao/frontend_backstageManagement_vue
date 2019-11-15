@@ -1,7 +1,7 @@
 <template>
 	<div>
        <!-- Page Footer-->
-          <footer class="main-footer">
+          <footer class="main-footer" style="margin-top: 5px;">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-sm-11" style="text-align: center;">

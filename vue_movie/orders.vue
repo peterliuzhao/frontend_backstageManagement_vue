@@ -104,7 +104,7 @@
 		methods: {
 			showAllOrders() {
 
-				this.$axios.get("orders", {
+				axios.get("orders", {
 						params: {
 							tid: "1"
 						}
@@ -115,7 +115,7 @@
 					})
 			},
 			showDayOrders() {
-				this.$axios.get("orders/findDay", {
+				axios.get("orders/findDay", {
 						params: {
 							tid: "1",
 							date: this.dates

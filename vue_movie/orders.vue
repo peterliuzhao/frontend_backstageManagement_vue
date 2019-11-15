@@ -80,8 +80,8 @@
 				</div>
 			</div>
 
-			<button type="button" class="btn btn-light">Light</button>
-
+			<button type="button" class="btn btn-light" id="prevBtn">前一页</button>
+			<button type="button" class="btn btn-light" id="nextBtn">下一页</button>
 
 
 		</section>

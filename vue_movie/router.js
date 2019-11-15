@@ -41,7 +41,7 @@ var router = new VueRouter({
 			components: {
 				"top": top,
 				"pageFooter": pageFooter,
-				"sideNavbar": middle,
+				"middle": middle,
 			},
 			children: [
 

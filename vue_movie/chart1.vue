@@ -1,8 +1,10 @@
 <template>
 
-
-	<v-chart :options="option" id="echarts"></v-chart>
-
+	<div>
+		<h2>最近10日营业额</h2>
+		
+		<v-chart :options="option" id="echarts"></v-chart>
+	</div>
 </template>
 
 <script>
@@ -33,10 +35,10 @@
 						}
 						console.log(xlist);
 						var option = {
-							title: {
-								text: "最近10日订单",
-								
-							},
+							// title: {
+							// 	text: "最近10日订单",
+
+							// },
 							tooltip: { //提示条
 								trigger: 'axis',
 								axisPointer: {
@@ -45,6 +47,9 @@
 										backgroundColor: '#6a7985'
 									}
 								}
+							},
+							legend: {
+								data: ['销售量']
 							},
 							xAxis: {
 								type: 'category',
@@ -60,7 +65,18 @@
 								// data: [820, 932, 901, 934, 1290, 1330, 1320],
 								data: ylist.reverse(),
 								type: 'line',
-								
+								name: "营业额",
+								stack: "营业额",
+								areaStyle: {},
+								// itemStyle: {
+								// 	normal: {
+								// 		lineStyle: {
+								// 			color: 'blue'
+								// 		}
+								// 	}
+								// },
+
+
 								label: {
 									normal: {
 										show: true,

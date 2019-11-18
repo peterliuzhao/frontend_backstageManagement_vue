@@ -21,7 +21,7 @@
 				<div class="row">
 
 					<div class="col-lg-12">
-						<router-view name="ordersChart"></router-view>
+						
 						<form class="form form-inline">
 							<button class="btn btn-info" @click="showAllOrders" type="button">所有订单</button>
 							<label>当前日期：</label> <input type="date" class="form-control" v-model="dates" />
@@ -53,7 +53,7 @@
 													<th>订单状态</th>
 													<!-- <th>顾客id</th> -->
 													<th>场次id</th>
-													<th>操作</th>
+													<!-- <th>操作</th> -->
 												</tr>
 											</thead>
 											<tbody>
@@ -66,7 +66,7 @@
 													<td>{{item.ostatus}}</td>
 													<!-- <td>{{item.cid}}</td> -->
 													<td>{{item.fsid}}</td>
-													<td>删除</td>
+													<!-- <td>删除</td> -->
 												</tr>
 											</tbody>
 										</table>

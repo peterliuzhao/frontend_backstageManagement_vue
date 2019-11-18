@@ -73,6 +73,7 @@
 
                   sessionStorage.setItem("isLogin",true);
                   sessionStorage.setItem("tid",response.data.tid);
+                  
                    // Create WebSocket connection.
                   const socket = new WebSocket('ws://192.168.9.217:8888/ordernotification');
                   

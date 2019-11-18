@@ -1,6 +1,6 @@
 <template>
 
-	<div>
+	<div style="text-align: center;">
 		<h2>最近10日营业额</h2>
 		
 		<v-chart :options="option" id="echarts"></v-chart>

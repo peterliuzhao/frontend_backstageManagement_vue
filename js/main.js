@@ -5,7 +5,7 @@ import axios from 'axios';
 window.axios = axios;
 
 Vue.prototype.$axios = axios;
-axios.defaults.baseURL = "http://localhost:8888/";
+axios.defaults.baseURL = "http://192.168.9.217:8888/";
 axios.defaults.withCredentials = true;
 
 

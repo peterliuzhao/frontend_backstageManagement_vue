@@ -21,6 +21,10 @@
                   <div class="content">
                     <form method="post" class="form-validate">
                       <div class="form-group">
+                        <input v-model="theaterName" id="login-Theatername" type="text" name="loginTheatername" required data-msg="请输入影院名称" class="input-material">
+                        <label for="login-Theatername" class="label-material">影院名称</label>
+                      </div>
+                      <div class="form-group">
                         <input v-model="username" id="login-username" type="text" name="loginUsername" required data-msg="请输入你的用户名" class="input-material">
                         <label for="login-username" class="label-material">用户名</label>
                       </div>
@@ -51,7 +55,8 @@
         data(){
             return{
                 username:"",
-                password:""
+                password:"",
+                theaterName:""
             }
         },
 
@@ -60,11 +65,31 @@
            this.$axios.get("users/login",{
             params:{
                 uname:this.username,
-                upwd:this.password
+                upwd:this.password,
+                theaterName:this.theaterName
             } }
             ).then((response)=>{
                 if(response.data.status == 200){
+
                   sessionStorage.setItem("isLogin",true);
+                  sessionStorage.setItem("tid",response.data.tid);
+                   // Create WebSocket connection.
+                  const socket = new WebSocket('ws://192.168.9.217:8888/ordernotification');
+                  
+                  socket.onopen = function(){
+                    alert(sessionStorage.getItem("tid"))
+                    socket.send("tid"+response.data.tid);
+                  }
+
+                  socket.addEventListener('message', function (event) {
+                      console.log('Message from server ', event.data);
+                  });    
+
+                  socket.onmessage = function(message){
+                      alert(message.data)  
+                      console.log(message)
+                  }
+                  
                   window.location.href='#/contentInner';
                 }
                 else if(response.data.status == 500){

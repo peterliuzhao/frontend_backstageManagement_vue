@@ -16,7 +16,7 @@
 						<div class="navbar-header">
 							<!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
 								<div class="brand-text d-none d-lg-inline-block"><span>影院后台管理系统 </span><strong></strong></div>
-								<div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
+								<div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>WoNiu</strong></div>
 							</a>
 							<!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
 						</div>
@@ -87,9 +87,8 @@
 								 aria-haspopup="true" aria-expanded="false" class="nav-link language dropdown-toggle"><img src="img/flags/16/CN.png"
 									 alt="English"><span class="d-none d-sm-inline-block">中文</span></a>
 								<ul aria-labelledby="languages" class="dropdown-menu">
-									<li><a rel="nofollow" href="#" class="dropdown-item"> <img src="img/flags/16/DE.png" alt="English" class="mr-2">German</a></li>
-									<li><a rel="nofollow" href="#" class="dropdown-item"> <img src="img/flags/16/FR.png" alt="English" class="mr-2">French
-										</a></li>
+									<li><a rel="nofollow" href="#" class="dropdown-item"> <img src="img/flags/16/US.png" alt="English" class="mr-2">English</a></li>
+									<!-- <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="img/flags/16/FR.png" alt="English" class="mr-2">French</a></li> -->
 								</ul>
 							</li>
 							<!-- Logout    -->
@@ -104,6 +103,7 @@
 </template>
 
 <script>
+        
 	export default {
 		methods: {
 			logout: function() {

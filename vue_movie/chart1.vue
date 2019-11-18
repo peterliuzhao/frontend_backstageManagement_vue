@@ -92,9 +92,6 @@
 	}
 </script>
 
-<style scoped="scoped">
-	#echarts {
-		width: 800px;
-		height: 500px;
-	}
+<style>
+
 </style>
